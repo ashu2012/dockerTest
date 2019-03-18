@@ -1,0 +1,8 @@
+.DS_Store
+.Rhistory
+jsonFiles-NAR-noff/
+*.swp
+dat-json/
+rep/*.html
+
+.Rproj.user

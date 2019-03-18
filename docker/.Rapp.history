@@ -1,0 +1,25 @@
+log_odds_predictionjson <- function(input1,input2) #
+{#
+  bank.df <- read.csv("banks.csv")#
+  bank.df <- bank.df[ , -c(1)] #Drop obs#
+  bank.df#
+  #select variables#
+  selected.var <- c("Financial.Condition", "TotExp.Assets", "TotLns.Lses.Assets")#
+  #partition data#
+  set.seed(2)#
+  train.index <- sample(c(1:dim(bank.df)[1]),dim(bank.df)[1] *0.70)#
+  train.df <- bank.df[train.index,selected.var]#
+  #test.df <- bank.df[-train.index,selected.var]#
+  # run logistic regression#
+  logit.reg <- glm(Financial.Condition ~ .,data=train.df, family= "binomial")#
+  options(scipen=999) #to remove the scientific notation#
+  #Input given by the user#
+  #input =rbind( data.frame("TotExp.Assets"= input1[1], "TotLns.Lses.Assets"= input1[2]), data.frame("TotExp.Assets"= input2[1], "TotLns.Lses.Assets"= input2[2]))#
+  inputa= fromJSON(input1)  #
+  inputb= fromJSON(input2)#
+  input = data.frame("TotExp.Assets"= inputa, "TotLns.Lses.Assets"= inputb)#
+  #to calculate the probability  #
+  logit.reg.pred <- predict(logit.reg, input, type= "response")#
+  return(logit.reg.pred)#
+}
+log_odds_predictionjson("[0.11]", "[0.5]")
