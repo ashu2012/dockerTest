@@ -1,0 +1,38 @@
+{
+  "calc_type": "HDN",
+  "parameters": {
+    "cycle_start_date": " ",
+    "cycle_days_burnin": 100,
+    "design_fresh_feed_percentage": 0.8,
+    "design_nitrogen_feed_percentage_threshold": 100,
+    "model_regression_min_run": 10,
+    "model_filter_window_size": 13,
+    "model_eigen_threshold": 1,
+    "model_do_interpolation": 0,
+    "model_linear_trend_run_threshold": 3,
+    "design_fresh_feed_value": 17000,
+    "design_nitrogen_feed_value": 2000,
+    "NABTDesign": 850,
+    "model_linear_trend_deviate_count": 0.0,
+    "current_line_number": 0.0,
+    "last_valid_line_slope": 0.0,
+    "last_valid_line_intercept": 0.0,
+    "last_valid_line_start_timestamp": 0.0,
+    "last_valid_line_end_timestamp": 1434412800.0,
+    "line_segment_start_index": 0,
+    "line_computed_for_model_regression_min_run": 0.0,
+    "model_max_consecutive_missing_data_tolerance": 20,
+    "model_max_percentage_slope_change_tolerance": 50,
+    "model_data_smoothening_loess": 0
+  },
+  "data_timeseries": [
+    {
+      "FI_30005_01.PV_BVFCR": 6421.121,
+      "SN_30231_01_N_TOT.PV_RW": 230.44,
+      "SN_30005_01_N_TOT.PV_RW": 1669.92,
+      "E301341_01.CYC_DOS_RC": 1.0,
+      "HDNDAR_01.HDN_NABT_RC": 608.657,
+      "Date": "2015-03-08"
+    }
+  ]
+}
